@@ -16,13 +16,14 @@ const createNavBar = () => {
 
   // Creates the base menu
   const menu = document.createElement("ul");
-  menu.setAttribute("id", "menu");
+  menu.setAttribute("id", "selection");
   navBar.appendChild(menu);
 
   // Creates menu selections
   for (let i = 0; i < menuArray.length; i++) {
     const list = document.createElement("li");
-
+    list.classList.add("menuSelection");
+    list.dataset.value = `item-${i}`;
     list.textContent = menuArray[i];
     menu.appendChild(list);
   }

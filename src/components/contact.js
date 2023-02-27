@@ -1,18 +1,18 @@
-const createMenu = () => {
+const createContact = () => {
   const selectContent = document.querySelector("#content");
   const selectSelector = document.querySelector(".selection");
   const selectCredits = document.querySelector("#credits");
 
   if (selectContent.contains(selectSelector)) {
     selectSelector.remove();
-    const menu = document.createElement("div");
-    menu.setAttribute("id", "menu");
-    menu.classList.add("selection");
+    const contact = document.createElement("div");
+    contact.setAttribute("id", "contact");
+    contact.classList.add("selection");
 
-    selectContent.insertBefore(menu, selectCredits);
+    selectContent.insertBefore(contact, selectCredits);
 
     selectContent.style.justifyContent = "center";
   }
 };
 
-export { createMenu };
+export { createContact };
