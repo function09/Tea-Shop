@@ -1,12 +1,12 @@
 import "./style.css";
 
 import { createNavBar, createCopyright } from "./components/UI";
-import { createAbout } from "./components/about";
-import { createMenu } from "./components/menu";
-import { createContact } from "./components/contact";
+import { createAboutTab } from "./components/about";
+import { createMenuTab } from "./components/menu";
+import { createContactTab } from "./components/contact";
 
 createNavBar();
-createAbout();
+createAboutTab();
 createCopyright();
 
 const selectMenuSelection = document.querySelectorAll(".menuSelection");
@@ -17,13 +17,13 @@ selectMenuSelection.forEach((selection) => {
 
     switch (selectValue) {
       case "item-0":
-        createAbout();
+        createAboutTab();
         break;
       case "item-1":
-        createMenu();
+        createMenuTab();
         break;
       case "item-2":
-        createContact();
+        createContactTab();
         break;
     }
   });
